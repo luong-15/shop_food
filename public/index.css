@@ -1,0 +1,45 @@
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.btnodernow:hover {
+    color: aliceblue;
+    background-color: black;
+}
+
+.btnslide:hover {
+    opacity: 40%;
+}
+
+.btnslide {
+    width: 40px;
+    height: 55px;
+}
+
+.btnaddtocard:hover {
+    color: black;
+    background-color: aliceblue;
+    border: solid 1px black;
+}
+
+.event-slider img {
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+}
+
+.btndots button:hover {
+    background-color: black;
+}
+
+.btnselect:hover {
+    transform: scale(1.11);
+    transition: transform 0.3s ease-in-out;
+}
+
+.btnsign:hover {
+    opacity: 0.7;
+    transition: transform 0.5s ease-in-out;
+}
