@@ -110,7 +110,7 @@
     <h1 class="text-3xl font-bold cursor-pointer">Foodie Haven</h1>
     <nav class="hidden lg:flex space-x-6">
       <ul class="flex space-x-6">
-        <li><a href="#" class="hover:text-secondary transition duration-300">Home</a></li>
+        <li><a href="/" class="hover:text-secondary transition duration-300">Home</a></li>
         <li><a href="#" class="hover:text-secondary transition duration-300">Menu</a></li>
         <li><a href="#" class="hover:text-secondary transition duration-300">Contact</a></li>
         <li><a href="#" class="hover:text-secondary transition duration-300">About</a></li>
@@ -156,9 +156,6 @@
       <div class="relative h-48 sm:h-64 md:h-80 lg:h-96">
         <div class="absolute inset-0 flex transition-transform duration-500 ease-in-out transform translate-x-0"
           id="slideshow">
-          <img src="https://placehold.co/800x400?text=Slide+1" alt="Slide 1" class="w-full object-cover" />
-          <img src="https://placehold.co/800x400?text=Slide+2" alt="Slide 2" class="w-full object-cover" />
-          <img src="https://placehold.co/800x400?text=Slide+3" alt="Slide 3" class="w-full object-cover" />
         </div>
       </div>
       <button
@@ -172,9 +169,6 @@
         <i class="fa-solid fa-arrow-right"></i>
       </button>
       <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 btndots" id="dots">
-        <button class="w-3 h-3 bg-muted rounded-full" data-index="0"></button>
-        <button class="w-3 h-3 bg-muted rounded-full" data-index="1"></button>
-        <button class="w-3 h-3 bg-muted rounded-full" data-index="2"></button>
       </div>
     </div>
 
@@ -183,49 +177,19 @@
       <div class="flex justify-center mb-6 space-x-4">
         <button
           class="btnselect bg-input text-foreground border border-border rounded-lg shadow-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-ring"
-          onclick="filterFood('pizza')">Đồ ăn</button>
+          onclick="filterFood('eat')">Đồ ăn</button>
         <button
           class="btnselect bg-input text-foreground border border-border rounded-lg shadow-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-ring"
-          onclick="filterFood('burger')">Thực phẩm</button>
+          onclick="filterFood('drink')">Đồ uống</button>
         <button
           class="btnselect bg-input text-foreground border border-border rounded-lg shadow-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-ring"
-          onclick="filterFood('salad')">Đồ uống</button>
-        <button
-          class="btnselect bg-input text-foreground border border-border rounded-lg shadow-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-ring"
-          onclick="filterFood('salad')">Thú cưng</button>
+          onclick="filterFood('pet')">Thú cưng</button>
       </div>
       <div id="food-items" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-
       </div>
     </section>
 
     <section class="selectproduct grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-      <div class="bg-card text-card-foreground p-5 rounded-lg shadow-lg transition-transform transform hover:scale-105">
-        <img src="https://placehold.co/300x200" alt="Delicious Pizza" class="w-full h-48 object-cover rounded-lg mb-4">
-        <h3 class="text-2xl font-bold mb-2">Delicious Pizza</h3>
-        <p class="text-muted-foreground mb-4">A classic Italian pizza with fresh ingredients and a crispy crust.</p>
-        <button class="btnaddtocard bg-primary text-primary-foreground px-5 py-2 rounded-lg transition duration-300">Add
-          to
-          Cart</button>
-      </div>
-
-      <div class="bg-card text-card-foreground p-5 rounded-lg shadow-lg transition-transform transform hover:scale-105">
-        <img src="https://placehold.co/300x200" alt="Tasty Burger" class="w-full h-48 object-cover rounded-lg mb-4">
-        <h3 class="text-2xl font-bold mb-2">Tasty Burger</h3>
-        <p class="text-muted-foreground mb-4">A juicy burger with fresh lettuce, tomato, and a special sauce.</p>
-        <button class="btnaddtocard bg-primary text-primary-foreground px-5 py-2 rounded-lg transition duration-300">Add
-          to
-          Cart</button>
-      </div>
-
-      <div class="bg-card text-card-foreground p-5 rounded-lg shadow-lg transition-transform transform hover:scale-105">
-        <img src="https://placehold.co/300x200" alt="Fresh Salad" class="w-full h-48 object-cover rounded-lg mb-4">
-        <h3 class="text-2xl font-bold mb-2">Fresh Salad</h3>
-        <p class="text-muted-foreground mb-4">A healthy salad with a mix of fresh vegetables and a light dressing.</p>
-        <button class="btnaddtocard bg-primary text-primary-foreground px-5 py-2 rounded-lg transition duration-300">Add
-          to
-          Cart</button>
-      </div>
     </section>
   </main>
   </div>
@@ -278,14 +242,14 @@
         <div>
           <h2 class="mt-6 text-center text-3xl font-extrabold">Sign in to your account</h2>
         </div>
-        <form id="sign-in-form" class="mt-8 space-y-6" action="#" method="POST">
+        <form id="sign-in-form" class="mt-8 space-y-6" action="/login" method="POST">
           <input type="hidden" name="remember" value="true" />
           <div class="rounded-md shadow-sm -space-y-px">
             <div>
-              <label for="username" class="sr-only">Username</label>
-              <input id="username-sign-in" name="username" type="text" autocomplete="username" required
-                class="appearance-none rounded-none relative block w-full px-3 py-2 border border-border placeholder-muted-foreground text-foreground rounded-t-md focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
-                placeholder="Username" />
+              <label for="email-address" class="sr-only">Email address</label>
+              <input id="email-address" name="email" type="email" autocomplete="email" required
+                class="appearance-none rounded-none relative block w-full px-3 py-2 border border-border placeholder-muted-foreground text-foreground focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
+                placeholder="Email address" />
             </div>
             <div>
               <label for="password" class="sr-only">Password</label>
@@ -327,7 +291,7 @@
         <div>
           <h2 class="mt-6 text-center text-3xl font-extrabold">Create your account</h2>
         </div>
-        <form id="sign-up-form" class="mt-8 space-y-6" action="#" method="POST">
+        <form id="sign-up-form" class="mt-8 space-y-6" action="/register" method="POST">
           <div class="rounded-md shadow-sm -space-y-px">
             <div>
               <label for="username" class="sr-only">Username</label>

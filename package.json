@@ -1,8 +1,9 @@
 {
   "name": "shop-food",
   "version": "1.0.0",
-  "main": "database.js",
+  "main": "app.js",
   "scripts": {
+    "start": "nodemon --inspect app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -10,7 +11,15 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
     "express": "^4.19.2",
-    "mysql2": "^3.11.0"
+    "js-cookie": "^3.0.5",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.11.0",
+    "nodemon": "^3.1.4",
+    "sequelize": "^6.37.3"
   }
 }
